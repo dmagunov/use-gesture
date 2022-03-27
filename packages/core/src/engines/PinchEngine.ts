@@ -233,7 +233,7 @@ export class PinchEngine extends Engine<'pinch'> {
   }
 
   wheel(event: WheelEvent) {
-    if (!event.ctrlKey) return
+    // if (!event.ctrlKey) return
     if (!this.state._active) this.wheelStart(event)
     else this.wheelChange(event)
     this.timeoutStore.add('wheelEnd', this.wheelEnd.bind(this))
